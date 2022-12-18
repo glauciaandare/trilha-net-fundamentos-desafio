@@ -5,6 +5,7 @@ namespace DesafioFundamentos.Models
         private decimal precoInicial = 0;
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
+        private decimal horas;
 
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
@@ -34,11 +35,10 @@ namespace DesafioFundamentos.Models
             // Verifica se o veículo existe
             if (veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
             {
-                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
-
-                int horas = 0;
-                decimal valorTotal = 0;
-                valorTotal = precoInicial + precoPorHora * horas;
+                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");                
+                  
+                              
+                decimal valorTotal = precoInicial + precoPorHora * horas;
 
                 veiculos.Remove(placa);
 
